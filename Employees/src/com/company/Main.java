@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -53,5 +55,23 @@ public class Main {
         frontEndProgrammer.doWork();
         backEndProgrammer.getPaid();
         frontEndProgrammer.getPaid();
+
+        System.out.println("----- Manager ----");
+        Manager m = new Manager("SuperBoss",5000,1000 );
+        m.addToTeam(q1);
+        m.addToTeam(q2);
+        m.addToTeam(p1);
+        m.addToTeam(p2);
+        m.addToTeam(intern1);
+        m.printTeam();
+
+        //System.out.println(Arrays.toString(m.team));
+
+        ArrayCopyDemo arrayCopyDemo=new ArrayCopyDemo();
+        System.out.println(arrayCopyDemo);
+
+        Object o = new Object();
+        o.
+
     }
 }
