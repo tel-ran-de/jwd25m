@@ -31,10 +31,17 @@ public class EmployeeTeam {
         //System.out.println(Arrays.toString(team));
     }
 
+    public EmployeeTeam(int capacity) {
+        this.capacity = capacity;
+    }
+    public EmployeeTeam() {
+
+    }
+
     public void print(){
         System.out.print("Team: ");
         for (int i = 0; i <currentIndex ; i++) {
-            System.out.print(team[i] + "   ");
+            System.out.println(i+ ": " + team[i] + "   ");
         }
         System.out.println();
     }
@@ -44,11 +51,46 @@ public class EmployeeTeam {
         return "Team{" + Arrays.toString(team) +  '}';
     }
 
+    public int findEmployee(Employee employee){
+        if (employee != null)
+            for (int i = 0; i < currentIndex; i++) {
+                if (team[i] != null &&
+                        team[i].hashCode() == employee.hashCode() &&
+                        team[i].equals(employee))
+                    return i;
+            }
+        return -1;
+    }
+
     public void remove(int index){
         if(currentIndex>0&&index<=currentIndex) {
             System.arraycopy(team, index + 1, team, index, capacity - 1 - index);
             currentIndex--;
         }
     }
+
+    public void remove(int index, boolean flag){     // OVERLOADING the remove method!!
+        if(flag){
+            System.out.println("remove element "+index);
+        }
+        remove(index);
+
+    }
+
+
+    public void remove(Employee employee){
+        int index= findEmployee(employee);
+        if(index!=-1){
+            remove(index);
+        }
+
+    }
+    public void remove(String str){
+
+    }
+
+
+
+
 
 }

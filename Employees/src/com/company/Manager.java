@@ -35,7 +35,17 @@ public class Manager extends Employee {
     }
 
     public void printTeam(){
-        System.out.println(team);
+        team.print();
+    }
+    public void  removeFromTeam(int index){
+        team.remove(index);
+    }
+    public void  removeFromTeam(int index,boolean flag){
+        team.remove(index,flag);
+    }
+
+    public void  removeFromTeam(Employee employee){
+        team.remove(employee);
     }
 
     }

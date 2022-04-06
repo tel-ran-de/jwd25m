@@ -64,6 +64,15 @@ public class Main {
         m.addToTeam(p2);
         m.addToTeam(intern1);
         m.printTeam();
+        m.removeFromTeam(2,true);
+        System.out.println("------------- после удаления --------");
+        m.printTeam();
+
+        System.out.println("----------- удаление через employee");
+        EmployeeTeam team= new EmployeeTeam(100);
+        BackEndProgrammer p100=new BackEndProgrammer("Nick",1500);
+        m.removeFromTeam(p100);
+        m.printTeam();
 
         //System.out.println(Arrays.toString(m.team));
 
