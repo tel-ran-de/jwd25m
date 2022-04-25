@@ -39,6 +39,7 @@ public class Main {
                 new Manager("Olga",3000,2000)
         };
 
+
         //Employee employee1 = new Employee("qwe",45);
 
         for (int i = 0; i < employee.length; i++) {

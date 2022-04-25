@@ -114,7 +114,7 @@ public class EmployeeTeam {
         int size=size();
         for (int i = 0; i < employees.length ; i++) {
             if(employees[i]!=null) {
-                remove(employees[i]);
+                this.remove(employees[i]);
             }
         }
         return size!=size();
@@ -124,7 +124,7 @@ public class EmployeeTeam {
         if(employees==null) return false;
         int size=size();
         for (int i = 0; i < employees.size() ; i++) {
-            Employee e=get(i);
+            Employee e=employees.get(i);
             if(e!=null) {
                 remove(e);
             }
@@ -146,7 +146,7 @@ public class EmployeeTeam {
                 add(employees[i]);
             }
         }
-        return size==size();
+        return size!=size();
     }
 
     public boolean addAll(EmployeeTeam employees){
